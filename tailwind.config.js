@@ -8,10 +8,10 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        powerToolsTheme: {
-          primary: "#a991f7",
+      powerToolsTheme: {
+          primary: "#ffaa01",
           secondary: "#f6d860",
-          accent: "#37cdbe",
+          accent: "#002c42",
           neutral: "#3d4451",
           "base-100": "#ffffff",
         },

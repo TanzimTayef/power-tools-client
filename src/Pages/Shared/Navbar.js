@@ -5,21 +5,21 @@ const Navbar = () => {
   const menuItems = (
     <>
       <li>
-        <Link to="/">Home</Link>
+        <Link className="font-bold uppercase hover:bg-neutral hover:text-white" to="/">Home</Link>
       </li>
 
       <li>
-        <Link to="/review">Review</Link>
+        <Link className="font-bold uppercase hover:bg-neutral hover:text-white" to="/review">Review</Link>
       </li>
 
       <li>
-        <Link to="/login">Login</Link>
+        <Link className="font-bold uppercase hover:bg-neutral hover:text-white" to="/login">Login</Link>
       </li>
     </>
   );
 
   return (
-    <div className="navbar bg-base-100 bg-gray-50">
+    <div className="navbar bg-base-100 sticky top-0 z-50 bg-primary">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabindex="0" className="btn btn-ghost lg:hidden">
@@ -45,13 +45,13 @@ const Navbar = () => {
             {menuItems}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">Power Tools</a>
+        <a className="normal-case text-xl text-2xl font-bold uppercase text-white">Power Tools</a>
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-center hidden lg:flex ">
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>
       </div>
       <div className="navbar-end">
-        <button class="btn btn-ghost btn-circle">
+        <button class="btn btn-ghost btn-circle hover:bg-neutral hover:text-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5"
@@ -67,7 +67,7 @@ const Navbar = () => {
             />
           </svg>
         </button>
-        <button class="btn btn-ghost btn-circle">
+        <button class="btn btn-ghost btn-circle hover:bg-neutral hover:text-white">
           <div class="indicator">
             <svg
               xmlns="http://www.w3.org/2000/svg"
