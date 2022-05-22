@@ -4,7 +4,7 @@ import Review from "./Review";
 
 const Reviews = () => {
   return (
-      <div class="px-12 py-28 min-h-screen  text-center" style={{ backgroundImage: `url(${bg})`, backgroundSize: 'cover' }}>
+      <div class="px-12 py-28 min-h-screen  text-center" style={{ backgroundImage: `url(${bg})`, backgroundSize: 'cover',  backgroundAttachment: 'fixed' }}>
       <div class="hero-overlay bg-opacity-60"></div>
           <div className="text-white mb-16">
               <h1 className="text-2xl text-primary uppercase font-bold">Reviews</h1>
