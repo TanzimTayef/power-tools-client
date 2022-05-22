@@ -7,7 +7,7 @@ const ToolsContainer = () => {
       <div className="text-center  mb-16">
         <h1 className="text-3xl uppercase font-bold  text-accent">Trending Tools</h1>
           </div>
-          <div className="grid sm:grid-cols-2 grid-cols-1  md:grid-cols-3 lg:grid-cols-4 gap-10">
+          <div className="grid  grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-10">
               <Tools/>
               <Tools/>
               <Tools/>
