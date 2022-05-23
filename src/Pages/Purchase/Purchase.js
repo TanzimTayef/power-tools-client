@@ -26,7 +26,7 @@ const Purchase = () => {
       toolsId: _id,
       toolsName: toolsName,
       quantity: minOrder,
-      orderEmail: user.email,
+      email: user.email,
       orderedPerson: user.displayName,
       phone: e.target.phone.value,
       address: e.target.address.value,
