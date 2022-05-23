@@ -1,6 +1,14 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Tools = () => {
+  const navigate = useNavigate();
+
+  const navigateToPurchasePage = () => {
+    navigate("/purchase");
+  }
+
+
   return (
     <div class="card lg:max-w-lg bg-base-100 shadow-xl">
       <figure>
@@ -22,9 +30,9 @@ const Tools = () => {
         </div>
 
         <div class="card-actions justify-end mt-2">
-          <button class="badge badge-accent p-4 text-xm hover:badge-primary">
+          <Link to="/purchase" onClick={navigateToPurchasePage} class="badge badge-accent p-4 text-xm hover:badge-primary">
             Order Now
-          </button>
+          </Link>
         </div>
       </div>
     </div>

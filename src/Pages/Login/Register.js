@@ -4,7 +4,6 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import loginImg from "../../images/login.jpg";
-import SocialLogin from "./SocialLogin";
 
 const Register = () => {
 
