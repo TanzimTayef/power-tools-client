@@ -1,11 +1,13 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Tools = () => {
+const Tools = ({ tool }) => {
+  const {_id, images, minOrder,availableQuan, toolsName, desc, price } = tool;
   const navigate = useNavigate();
 
-  const navigateToPurchasePage = () => {
-    navigate("/purchase");
+  const navigateToPurchasePage = (id) => {
+    console.log(id)
+    navigate(`/purchase/${id}`);
   }
 
 
@@ -14,25 +16,25 @@ const Tools = () => {
       <figure>
         <img
           src="https://api.lorem.space/image/shoes?w=400&h=225"
-          alt="Shoes"
+          alt="tools"
         />
       </figure>
       <div class="card-body">
-        <h2 class="card-title border-b pb-1">
-          Shoes!
-          <div class="badge badge-secondary">NEW</div>
+        <h2 class="font-bold border-b text-md pb-1">
+          {toolsName}
+          <p class="badge badge-secondary ml-1 text-sm"><small>NEW</small></p>
         </h2>
-        <h3 className="text-xl text-accent">Price:<span className="font-bold text-primary text-3xl"> 37</span>$</h3>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <h3 className="text-xl text-accent">Price:<span className="font-bold text-primary text-3xl">{price }</span>$</h3>
+        <p className="text-sm">{desc.slice(0, 52)}...</p>
         <div className="border-l-2 pl-2 border-l-primary">
-          <p className="text-sm">Available: <span className="font-bold text-xl">3000</span> Piece</p>
-          <p className="text-sm">Minimum Order: <span className="font-bold text-xl">45</span>  Piece</p>
+          <p className="text-sm">Available: <span className="font-bold text-xl">{availableQuan}</span> Piece</p>
+          <p className="text-sm">Minimum Order: <span className="font-bold text-xl">{minOrder}</span>  Piece</p>
         </div>
 
         <div class="card-actions justify-end mt-2">
-          <Link to="/purchase" onClick={navigateToPurchasePage} class="badge badge-accent p-4 text-xm hover:badge-primary">
+          <button onClick={() => navigateToPurchasePage(_id)} class="badge badge-accent p-4 text-xm hover:badge-primary">
             Order Now
-          </Link>
+          </button>
         </div>
       </div>
     </div>
