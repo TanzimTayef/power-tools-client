@@ -19,7 +19,13 @@ const Navbar = () => {
       <li>
         <Link className="font-bold uppercase hover:bg-neutral hover:text-white" to="/review">Review</Link>
       </li>
-
+      
+      <li> 
+        {
+          user ?  <Link className="font-bold uppercase hover:bg-neutral hover:text-white" to="/dashboard">Dashboard</Link> : ''
+        }
+       </li>
+       
      
       <li>
         {user ? (

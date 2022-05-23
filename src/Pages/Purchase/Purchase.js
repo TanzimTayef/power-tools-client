@@ -8,6 +8,7 @@ const Purchase = () => {
   const { images, _id, toolsName, minOrder, availableQuan, desc } = tool;
   const { purchaseId } = useParams();
   const [user] = useAuthState(auth);
+  const [q, setQ] = useState(minOrder);
 
   useEffect(() => {
     const url = `http://localhost:5000/tools/${purchaseId}`;
@@ -28,6 +29,7 @@ const Purchase = () => {
       orderEmail: user.email,
       orderedPerson: user.displayName,
       phone: e.target.phone.value,
+      address: e.target.address.value,
     };
 
     fetch("http://localhost:5000/order", {
@@ -43,6 +45,12 @@ const Purchase = () => {
         console.log("order success");
       });
   };
+
+  const increase = (e) => {
+    const inQ = q - 1;
+    setQ(inQ)
+
+  }
 
   return (
     <section className="min-h-screen container mx-auto">
@@ -90,8 +98,24 @@ const Purchase = () => {
           className="input input-bordered w-full max-w-xs"
         />
         <input
+          type="text"
+          name="address"
+          placeholder="address"
+          className="input input-bordered w-full max-w-xs"
+        />
+        <div>
+          <button  onClick={increase} className="btn">+</button>
+          <button className="btn">-</button>
+           <input
+          type="text"
+          name="quantity"
+          value={q}
+          className="input input-bordered w-full max-w-xs"
+        />
+         </div>
+        <input
           type="submit"
-          value="Purchase"
+          value="purchase"
           className="btn btn-secondary w-full max-w-xs"
         />
       </form>
