@@ -1,6 +1,7 @@
 import React from "react";
 
-const Review = () => {
+const Review = ({ review }) => {
+  const {name, picture, address, rating, message} = review;
   return (
     <div class="card lg:mx-w-lg bg-base-100 shadow-xl shadow-primary">
       <div class="card-body">
@@ -13,21 +14,19 @@ const Review = () => {
                 </div>
                       </div>
                       <div className="mt-2">
-                      <h4 className="font-bold text-md text-accent">Jhon dho</h4>
-              <p className="text-accent">sylhet Dhaka</p>
+              <h4 className="font-bold text-md text-accent">{name}</h4>
+              <p className="text-accent">sylhet</p>
              </div>
             </div>
            
          
           <div className="text-left pl-5 flex-1">
               <p className="text-xl text-primary  mb-2">
-                Ratting: <span className="font-bold text-2xl"> 4/5</span>
+              Ratting: <span className="font-bold text-2xl">{rating}</span>
               </p>
            
             <q className="text-xl italic ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-              placeat voluptatibus adipisci ipsa neque magnam excepturi porro!
-              Aliquam, labore quia.
+              {message.slice(1,200)}...
             </q>
                  
           </div>
