@@ -17,6 +17,7 @@ import MakeAdmin from "./Pages/Dashboard/MakeAdmin";
 import ManageTools from "./Pages/Dashboard/ManageTools";
 import MyPortfolio from "./Pages/MyPortfolio/MyPortfolio";
 
+
 function App() {
   return (
     <div className="mx-w-7xl mx-auto">
@@ -38,7 +39,7 @@ function App() {
           <Route path="manageOrders" element={<ManageOrders />} />   
           <Route path="addTools" element={<AddTools />} />   
           <Route path="makeAdmin" element={<MakeAdmin />} />   
-          <Route path="manageTools" element={<ManageTools />} />   
+          <Route path="manageTools" element={<ManageTools />} />  
         </Route>
         <Route path="/portfolio" element={<MyPortfolio />} />
         <Route path="/login" element={<Login />} />

@@ -12,7 +12,7 @@ const MyOrder = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setOrders(data));
-    }, [])
+    }, [user])
     
     const handleDelete = id =>{
         const proceed = window.confirm('Are you sure?');
