@@ -3,8 +3,10 @@ import React from 'react';
 const ManageOrders = () => {
     return (
         <div>
-            This is manage orders page
+            <h1>Manage All Orders</h1>
+            
         </div>
+
     );
 };
 

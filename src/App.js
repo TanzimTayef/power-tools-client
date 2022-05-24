@@ -15,6 +15,7 @@ import ManageOrders from "./Pages/Dashboard/ManageOrders";
 import AddTools from "./Pages/Dashboard/AddTools";
 import MakeAdmin from "./Pages/Dashboard/MakeAdmin";
 import ManageTools from "./Pages/Dashboard/ManageTools";
+import MyPortfolio from "./Pages/MyPortfolio/MyPortfolio";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
           <Route path="makeAdmin" element={<MakeAdmin />} />   
           <Route path="manageTools" element={<ManageTools />} />   
         </Route>
+        <Route path="/portfolio" element={<MyPortfolio />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>

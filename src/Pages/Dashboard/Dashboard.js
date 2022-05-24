@@ -9,9 +9,9 @@ const Dashboard = () => {
         <h2 className="text-3xl font-bold text-accent">Dashboard</h2>
         <Outlet />
       </div>
-      <div class="drawer-side">
+      <div class="drawer-side ">
         <label for="dashboard-sidebar" class="drawer-overlay"></label>
-        <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+        <ul class="menu p-4 overflow-y-auto w-60 bg-yellow-100  bg-base-100 text-base-content">
           {/* Sidebar content here  */}
           <li>
             <Link to="/dashboard/">My Order</Link>

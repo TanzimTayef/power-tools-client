@@ -19,6 +19,9 @@ const Navbar = () => {
       <li>
         <Link className="font-bold uppercase hover:bg-neutral hover:text-white" to="/review">Review</Link>
       </li>
+      <li>
+        <Link className="font-bold uppercase hover:bg-neutral hover:text-white" to="/portfolio">My Portfolio</Link>
+      </li>
       
       <li> 
         {
