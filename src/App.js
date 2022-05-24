@@ -16,6 +16,7 @@ import AddTools from "./Pages/Dashboard/AddTools";
 import MakeAdmin from "./Pages/Dashboard/MakeAdmin";
 import ManageTools from "./Pages/Dashboard/ManageTools";
 import MyPortfolio from "./Pages/MyPortfolio/MyPortfolio";
+import Payment from "./Pages/Dashboard/Payment";
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
           <Route path="addTools" element={<AddTools />} />   
           <Route path="makeAdmin" element={<MakeAdmin />} />   
           <Route path="manageTools" element={<ManageTools />} />  
+          <Route path="payment/:id" element={<Payment />} />  
         </Route>
         <Route path="/portfolio" element={<MyPortfolio />} />
         <Route path="/login" element={<Login />} />

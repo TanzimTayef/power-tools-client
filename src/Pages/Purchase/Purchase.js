@@ -5,7 +5,7 @@ import auth from "../../firebase.init";
 
 const Purchase = () => {
   const [tool, setTool] = useState({});
-  const { images, _id, toolsName, minOrder, availableQuan, desc } = tool;
+  const { images, _id, toolsName, minOrder, availableQuan, desc, price } = tool;
   const { purchaseId } = useParams();
   const [user] = useAuthState(auth);
   const [q, setQ] = useState(minOrder);
@@ -24,6 +24,7 @@ const Purchase = () => {
 
     const order = {
       toolsName: toolsName,
+      price: price,
       quantity: minOrder,
       email: user.email,
       orderedPerson: user.displayName,
