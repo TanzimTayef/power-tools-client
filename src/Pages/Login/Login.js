@@ -8,6 +8,7 @@ import {
 import auth from "../../firebase.init";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import useToken from "../../hooks/useToken";
+import Loading from "../Shared/Loading";
 
 // import useToken from "../../hooks/useToken";
 
@@ -39,7 +40,7 @@ const {
   },[token, from ,navigate])
 
   if (loading || gLoading ) {
-    return <p>Loading</p>;
+    return <Loading/>
   }
   if (error || gError) {
     signInError = (

@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import useToken from '../../hooks/useToken';
 import loginImg from "../../images/login.jpg";
+import Loading from '../Shared/Loading';
 
 const Register = () => {
 
@@ -28,7 +29,7 @@ const [token]= useToken(gUser || user);
   let signInError;
 
   if (loading || gLoading || updating) {
-    return   <p>Loading...</p>
+    return  <Loading/>
   }
   if (error || gError || updateError) {
     signInError = (
