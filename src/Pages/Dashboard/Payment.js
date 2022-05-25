@@ -29,7 +29,7 @@ const Payment = () => {
       <div class="card w-50 max-w-md bg-base-100 shadow-xl my-8">
        
         <div class="card-body">
-                  <p className="text-success font-bold">Hello, { orders.personName}</p>
+                  <p className="text-primary font-bold">Hello, { orders.personName}</p>
           <h2 class="card-title">Please Pay for  { orders.toolsName}</h2>
           <p>
                       Your Ordered: <span className="text-primary text-xl">{orders.quantity}</span> pieces
