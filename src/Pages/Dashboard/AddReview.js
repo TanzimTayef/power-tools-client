@@ -20,17 +20,27 @@ const AddReview = () => {
             } )
         };
     return (
-        <div className='w-50 mx-auto'>
-        <h2>Please add a Review</h2>
-        <form className='grid grid-cols-1 gap-5 w-96' onSubmit={handleSubmit(onSubmit)}>
-            <input className='border' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
-            <input className='border' placeholder='Address' {...register("address", { required: true, maxLength: 20 })} />
-            <textarea className='border' placeholder='Description' {...register("description")} />
-            <input className='border' placeholder='Rating' type="number" {...register("rating")} />
-            <input className='border' placeholder='Photo URL' type="text" {...register("picture")} />
+        <section className='container mx-auto py-16 '>
+            <div className='bg-slate-50 p-16  shadow'>
+            <div className="mb-10">
+          <h1 className="text-2xl text-gray-500 border-b-2 text-center pb-4 uppercase font-bold">
+            Add a Review
+          </h1>
+        </div>
+
+            <div className="p-5">
+            <form className='grid grid-cols-1 gap-5 ' onSubmit={handleSubmit(onSubmit)}>
+            <input className='border p-2 rounded-md' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
+            <input className='border p-2 rounded-md' placeholder='Address' {...register("address", { required: true, maxLength: 20 })} />
+            <textarea className='border p-2 rounded-md' placeholder='Description' {...register("description")} />
+            <input className='border p-2 rounded-md' placeholder='Rating' type="number" {...register("rating")} />
+            <input className='border p-2 rounded-md' placeholder='Photo URL' type="text" {...register("picture")} />
             <input type="submit" className='btn w-full' value="Add Review" />
         </form>
+            </div>
     </div>
+    
+    </section>
     );
 };
 

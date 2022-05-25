@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { useParams } from "react-router-dom";
+import { Link, Outlet, useParams } from "react-router-dom";
 import auth from "../../firebase.init";
 
 const Purchase = () => {
@@ -48,77 +48,122 @@ const Purchase = () => {
 
   const increase = (e) => {
     const inQ = q - 1;
-    setQ(inQ)
-
-  }
+    setQ(inQ);
+  };
 
   return (
-    <section className="min-h-screen container mx-auto">
-      This is purchase page: {tool._id}
-      <div class="card card-side bg-base-100 shadow-xl">
-        <figure>
-          <img
-            src="https://api.lorem.space/image/movie?w=200&h=280"
-            alt="Movie"
+    <section className="p-16 ">
+      <div class="grid grid-rows-3  grid-cols-3 grid-flow-col gap-10 ">
+        <div class="row-span-3 col-span-2 shadow bg-base-100 flex justify-center items-center">
+          <div class="card ">
+            <figure>
+              <img
+                src="https://api.lorem.space/image/shoes?w=400&h=225"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="card-body">
+              <div>
+                <h2 class="card-title mb-2 text-4xl text-gray-500">{toolsName}</h2>
+                <p className="text-xl">Available Quantity: {availableQuan}</p>
+                <p className="text-xl">Minimum Order: {minOrder}</p>
+                <p className="text-md mt-2">{desc}</p>
+              </div>
+              <div class="card-actions justify-center mt-5">
+                <div className="grid grid-cols-3 gap-5 border-t-4 border-gray-300 pt-5">
+                <img
+                src="https://api.lorem.space/image/shoes?w=400&h=225"
+                alt="Shoes"
+                />
+                <img
+              src="https://api.lorem.space/image/shoes?w=400&h=225"
+              alt="Shoes"
+                />
+                <img
+            src="https://api.lorem.space/image/shoes?w=400&h=225"
+            alt="Shoes"
           />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">{toolsName}</h2>
-          <p>Available Quantity: {availableQuan}</p>
-          <p>Minimum Order: {minOrder}</p>
-          <p>{tool.desc}</p>
-          <div class="card-actions justify-end">
-            <button class="btn btn-primary">Purchase</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="shadow bg-base-100 px-3 py-5">
+        <h1 className="font-bold border-b-4 border-gray-300 pb-1 text-gray-500 uppercase text-center text-xl">
+              Total Price
+            </h1>
+         <p className="text-center py-5 text-2xl"><span >0000</span> US</p>
+        </div>
+        <div class="row-span-2 bg-slate-50 shadow py-5 px-3">
+          <div className="">
+            <h1 className="font-bold border-b-4 border-gray-300 pb-1 text-gray-500 uppercase text-center text-xl">
+              Purchase The Product
+            </h1>
+
+            <div className="mt-8">
+              <p className=" font-bold mb-2 border-b-2 pb-1 border-gray-300 uppercase text-gray-500">
+                {" "}
+                Quantity
+              </p>
+              <div class="flex shadow">
+                <button className="bg-gray-300 py-2 px-5 font-bold text-xl">
+                  -
+                </button>
+                <input
+                  type="text"
+                  placeholder="00"
+                  class="bg-white w-full shadow px-5 py-1 max-w-xs text-center"
+                />
+                <button className="bg-gray-300 py-2 px-5 font-bold text-xl">
+                  +
+                </button>
+              </div>
+            </div>
+
+            <div className="mt-5">
+              <p className=" font-bold mb-2 border-b-2 pb-1 border-gray-300 uppercase text-gray-500">
+                Information
+              </p>
+              <form
+                onSubmit={handleBooking}
+                className="grid grid-cols-1 gap-3 mt-5  justify-items-center mt-2"
+              >
+                <input
+                  type="text"
+                  name="name"
+                  disabled
+                  value={user?.displayName}
+                  className=" bg-white w-full shadow px-2 py-1 max-w-xs"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  disabled
+                  value={user?.email}
+                  className="bg-white w-full shadow px-2 py-1 max-w-xs"
+                />
+                <input
+                  type="text"
+                  name="phone"
+                  placeholder="Phone"
+                  className="bg-white w-full shadow px-2 py-1 max-w-xs"
+                />
+                <input
+                  type="text"
+                  name="address"
+                  placeholder="address"
+                  className="bg-white w-full shadow px-2 py-1 max-w-xs"
+                />
+                <input
+                  type="submit"
+                  value="purchase"
+                  className="btn btn-secondary w-full max-w-xs mt-3"
+                />
+              </form>
+            </div>
           </div>
         </div>
       </div>
-      {/* order input */}
-      <form
-        onSubmit={handleBooking}
-        className="grid grid-cols-1 gap-3 justify-items-center mt-2"
-      >
-        <input
-          type="text"
-          name="name"
-          disabled
-          value={user?.displayName}
-          className="input input-bordered w-full max-w-xs"
-        />
-        <input
-          type="email"
-          name="email"
-          disabled
-          value={user?.email}
-          className="input input-bordered w-full max-w-xs"
-        />
-        <input
-          type="text"
-          name="phone"
-          placeholder="Phone"
-          className="input input-bordered w-full max-w-xs"
-        />
-        <input
-          type="text"
-          name="address"
-          placeholder="address"
-          className="input input-bordered w-full max-w-xs"
-        />
-        <div>
-          <button  onClick={increase} className="btn">+</button>
-          <button className="btn">-</button>
-           <input
-          type="text"
-          name="quantity"
-          value={q}
-          className="input input-bordered w-full max-w-xs"
-        />
-         </div>
-        <input
-          type="submit"
-          value="purchase"
-          className="btn btn-secondary w-full max-w-xs"
-        />
-      </form>
     </section>
   );
 };

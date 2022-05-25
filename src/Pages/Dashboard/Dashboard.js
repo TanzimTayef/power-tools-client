@@ -10,13 +10,13 @@ const Dashboard = () => {
   return (
     <div class="drawer drawer-mobile">
       <input id="dashboard-sidebar" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content ">
+      <div class="drawer-content px-16 sticky top-0 z-50 ">
         <h2 className="text-3xl font-bold text-accent">Dashboard</h2>
         <Outlet />
       </div>
       <div class="drawer-side ">
         <label for="dashboard-sidebar" class="drawer-overlay"></label>
-        <ul class="menu p-4 overflow-y-auto w-60 bg-yellow-100  bg-base-100 text-base-content">
+        <ul class="menu p-4 overflow-y-auto w-60 bg-yellow-100   text-base-content">
           {/* Sidebar content here  */}
           <li> <Link to="/dashboard/">My Order</Link>  </li>
           <li> <Link to="/dashboard/profile">My Profile</Link></li>

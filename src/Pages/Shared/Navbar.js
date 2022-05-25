@@ -25,7 +25,7 @@ const Navbar = () => {
       
       <li> 
         {
-          user ?  <Link className="font-bold uppercase hover:bg-neutral hover:text-white" to="/dashboard">Dashboard</Link> : ''
+          user &&  <Link className="font-bold uppercase hover:bg-neutral hover:text-white" to="/dashboard">Dashboard</Link> 
         }
        </li>
        

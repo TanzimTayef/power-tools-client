@@ -12,7 +12,7 @@ const ToolsContainer = () => {
           </div>
           <div className="grid  grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-10">
         {
-          tools.slice(0, 4).map(tool => <Tools key={tool._id} tool={tool} />)
+          tools.slice(0, 8).map(tool => <Tools key={tool._id} tool={tool} />)
               }
           </div>
     </div>

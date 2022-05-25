@@ -17,6 +17,9 @@ import MakeAdmin from "./Pages/Dashboard/MakeAdmin";
 import ManageTools from "./Pages/Dashboard/ManageTools";
 import MyPortfolio from "./Pages/MyPortfolio/MyPortfolio";
 import Payment from "./Pages/Dashboard/Payment";
+import NotFound from "./Pages/Shared/NotFound";
+import PurchaseContainer from "./Pages/Purchase/PurchaseContainer";
+import AllTools from "./Pages/Purchase/AllTools";
 
 
 function App() {
@@ -25,14 +28,11 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route
-          path="/purchase/:purchaseId"
-          element={
-            <RequireAuth>
-              <Purchase />
-            </RequireAuth>
-          }
-        />
+        {/* for test */}
+        <Route path="/purchase/:purchaseId" element={<RequireAuth> <PurchaseContainer /> </RequireAuth>}>
+          <Route index element={<RequireAuth> <Purchase /></RequireAuth>} />
+          <Route path="allTools" element={<AllTools />} /> 
+        </Route>
         <Route  path="/dashboard"  element={ <RequireAuth> <Dashboard/> </RequireAuth>}>
           <Route index element={<MyOrder />} />
           <Route path="review" element={<AddReview/>}/>
@@ -46,6 +46,7 @@ function App() {
         <Route path="/portfolio" element={<MyPortfolio />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>

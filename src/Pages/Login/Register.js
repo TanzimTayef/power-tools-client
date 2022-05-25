@@ -91,7 +91,7 @@ const [token]= useToken(gUser || user);
               <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-control w-full max-w-xs">
               <label className="label">
-                <span className="label-text">name</span>
+                <span className="label-text">Name</span>
               </label>
               <input
                 type="text"

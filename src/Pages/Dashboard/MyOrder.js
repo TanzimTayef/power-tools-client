@@ -32,7 +32,7 @@ const MyOrder = () => {
   };
 
   return (
-    <div>
+    <section className="py-8">
       <div class="overflow-x-auto">
         <table class="table table-compact w-full">
           <thead>
@@ -65,7 +65,7 @@ const MyOrder = () => {
           </tfoot>
         </table>
       </div>
-    </div>
+    </section>
   );
 };
 
