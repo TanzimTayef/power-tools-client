@@ -18,7 +18,7 @@ const PurchaseContainer = () => {
         </div>
         <div class="drawer-side ">
           <label for="dashboard-sidebar" class="drawer-overlay"></label>
-          <ul class="menu p-4 overflow-y-auto w-50 bg-slate-100 shadow border-r-2   bg-base-100 text-base-content">
+          <ul class="menu p-4 overflow-y-auto w-50 bg-slate-50 shadow border-r-2   bg-base-100 text-base-content">
             {/* Sidebar content here  */}
             <li>
         <Link className="font-bold uppercase hover:bg-neutral hover:text-white" to="/">Home</Link>
