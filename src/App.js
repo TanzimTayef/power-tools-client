@@ -22,6 +22,7 @@ import PurchaseContainer from "./Pages/Purchase/PurchaseContainer";
 import AllTools from "./Pages/Purchase/AllTools";
 
 
+
 function App() {
   return (
     <div className="mx-w-7xl mx-auto">

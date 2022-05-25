@@ -1,14 +1,14 @@
 import React from "react";
-import contactImg from "../../images/blog-1.jpg";
+import contactImg from "../../images/d-3.jpg";
 
 const Contact = () => {
   return (
     <section className=" py-28 min-h-screen ">
       <div className="flex justify-between pl-16">
-        <div className="flex-1 w-2/4">
+        <div className="flex-1 ">
           <h2 className="text-5xl font-bold text-accent">Get in touch</h2>
           <p className="text-xl mt-5">
-            Want to get in touch? We'd love to hear from you. Here's how you can
+            Want to get in touch? We'd love to hear from you. <br/> Here's how you can
             reach us...
           </p>
         </div>
@@ -42,7 +42,7 @@ const Contact = () => {
             </p>
 
             <div class="card-actions ">
-              <button class="btn btn-accent  ">Contact Support</button>
+              <button class="btn btn-accent hover:btn-primary hover:text-accent ">Contact Support</button>
             </div>
           </div>
         </div>

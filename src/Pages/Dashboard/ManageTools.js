@@ -10,9 +10,6 @@ const ManageTools = () => {
         <thead>
           <tr>
             <th>
-              <label>
-                <input type="checkbox" class="checkbox" />
-              </label>
             </th>
                       <th>Product</th>
                       <th>Available Tools</th>

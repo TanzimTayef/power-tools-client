@@ -8,7 +8,9 @@ const Purchase = () => {
   const { images, _id, toolsName, minOrder, availableQuan, desc, price } = tool;
   const { purchaseId } = useParams();
   const [user] = useAuthState(auth);
-  const [q, setQ] = useState(minOrder);
+
+
+  
 
   useEffect(() => {
     const url = `http://localhost:5000/tools/${purchaseId}`;
@@ -21,11 +23,12 @@ const Purchase = () => {
   const handleBooking = (e) => {
     e.preventDefault();
     console.log(user);
-
+    console.log()
+    const newQuantity = parseInt(e.target.quantity.value);
     const order = {
       toolsName: toolsName,
       price: price,
-      quantity: minOrder,
+      quantity: newQuantity,
       email: user.email,
       orderedPerson: user.displayName,
       phone: e.target.phone.value,
@@ -46,10 +49,6 @@ const Purchase = () => {
       });
   };
 
-  const increase = (e) => {
-    const inQ = q - 1;
-    setQ(inQ);
-  };
 
   return (
     <section className="p-16 ">
@@ -64,9 +63,9 @@ const Purchase = () => {
             </figure>
             <div class="card-body">
               <div>
-                <h2 class="card-title mb-2 text-4xl text-gray-500">{toolsName}</h2>
-                <p className="text-xl">Available Quantity: {availableQuan}</p>
-                <p className="text-xl">Minimum Order: {minOrder}</p>
+                <h2 class="card-title mb-2 text-4xl text-primary">{toolsName}</h2>
+                <p className="text-xl ">Available Quantity: {availableQuan}</p>
+                <p className="text-xl ">Minimum Order: {minOrder}</p>
                 <p className="text-md mt-2">{desc}</p>
               </div>
               <div class="card-actions justify-center mt-5">
@@ -110,8 +109,9 @@ const Purchase = () => {
                   -
                 </button>
                 <input
+                 
                   type="text"
-                  placeholder="00"
+                  placeholder={minOrder}
                   class="bg-white w-full shadow px-5 py-1 max-w-xs text-center"
                 />
                 <button className="bg-gray-300 py-2 px-5 font-bold text-xl">
@@ -154,6 +154,20 @@ const Purchase = () => {
                   placeholder="address"
                   className="bg-white w-full shadow px-2 py-1 max-w-xs"
                 />
+                  <div class="flex shadow">
+                <button  className="bg-gray-300 py-2 px-5 font-bold text-xl">
+                  -
+                </button>
+                  <input
+                    name="quantity"
+                  type="text"
+                  placeholder={minOrder}
+                  class="bg-white w-full shadow px-5 py-1 max-w-xs text-center"
+                />
+                <button className="bg-gray-300 py-2 px-5 font-bold text-xl">
+                  +
+                </button>
+              </div>
                 <input
                   type="submit"
                   value="purchase"

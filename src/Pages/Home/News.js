@@ -9,24 +9,24 @@ const News = () => {
     const allNews = [
         {
             _id: 1,
-            name: 'This is news name 1',
+            name: 'limestone grinding process line',
             img: newsImg1,
-            desc: 'If a dog chews shoes whose shoes does he choose? If a dog chews shoes whose shoes does he choose?If a dog chews shoes whose shoes does he choose?'
+            desc: 'Limestone Grinding Mill,Limestone Grinding Machine , Know More. limestone grinding mill limestone vertical mill Clirik Service Since the establishment, our company has regarded All for customers as the service target and has provided high-quality, high-taste, high-efficient and all-around-way service for clients.'
       
        
         },
         {
             _id: 2,
-            name: 'This is news name 1',
+            name: 'HGM Calcite/ Limestone Grinding machine-Stone Grinding',
             img: newsImg2,
-            desc: 'If a dog chews shoes whose shoes does he choose? If a dog chews shoes whose shoes does he choose?If a dog chews shoes whose shoes does he choose?'
+            desc: 'The roller and ring are made of special material, which improve the grinding efficiency a lot. For same material and final size, the lifetime of its wearing parts can reach to more than one year, about 2-5 times as long as that of vertical shaft impact crusher and turbo-mill.'
            
         },
         {
             _id: 3,
             img: newsImg3,
-            name: 'This is news name 1',
-            desc: 'If a dog chews shoes whose shoes does he choose? If a dog chews shoes whose shoes does he choose?If a dog chews shoes whose shoes does he choose?'
+            name: 'Limestone Powder Grinding Mill',
+            desc: 'Limestone Powder Grinding Mill carry on to further improve, to guarantee merchandise high-quality in line with market and buyer standard necessities. Our organization has a top quality assurance procedure have already been established for Limestone Powder Grinding Mill, Micronizer Machine , Ultra Fine Powder Grinder , Powder Processing Equipment , Jet Mills'
            
         }
     ]

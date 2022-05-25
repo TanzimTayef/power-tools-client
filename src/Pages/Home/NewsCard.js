@@ -14,10 +14,9 @@ const NewsCard = ({news}) => {
         />
       </figure>
       <div class="card-body items-center text-center">
-              <h2 class="card-title uppercase font-bold text-secondary">{news.name}</h2>
-              <p>{news.desc}</p>
+              <h2 class="text-md uppercase font-bold text-accent">{news.name}</h2>
+              <p className="text-sm">{news.desc.slice(0,200)}...</p>
         <div class="card-actions">
-                  
                   <button class="btn btn-ghost  hover:bg-transparent hover:text-primary hover:font-bold">Read More ❯</button>
         </div>
       </div>
