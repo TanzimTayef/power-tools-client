@@ -17,7 +17,7 @@ const Navbar = () => {
       </li>
 
       <li>
-        <Link className="font-semibold hover:bg-primary text-sm text-gray-200 uppercase hover:bg-neutral " to="/review">Review</Link>
+        <Link className="font-semibold hover:bg-primary text-sm text-gray-200 uppercase hover:bg-neutral " to="/blogs">Blogs</Link>
       </li>
       <li>
         <Link className="font-semibold hover:bg-primary text-sm text-gray-200 uppercase hover:bg-neutral " to="/portfolio">My Portfolio</Link>

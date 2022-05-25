@@ -20,6 +20,7 @@ import Payment from "./Pages/Dashboard/Payment";
 import NotFound from "./Pages/Shared/NotFound";
 import PurchaseContainer from "./Pages/Purchase/PurchaseContainer";
 import AllTools from "./Pages/Purchase/AllTools";
+import Blogs from "./Pages/Blogs/Blogs";
 
 
 
@@ -45,6 +46,7 @@ function App() {
           <Route path="payment/:id" element={<Payment />} />  
         </Route>
         <Route path="/portfolio" element={<MyPortfolio />} />
+        <Route path="/blogs" element={<Blogs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="*" element={<NotFound />} />
