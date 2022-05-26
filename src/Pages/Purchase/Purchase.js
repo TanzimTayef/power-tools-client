@@ -57,8 +57,8 @@ const Purchase = () => {
           <div class="card ">
             <figure>
               <img
-                src="https://api.lorem.space/image/shoes?w=400&h=225"
-                alt="Shoes"
+                src={images}
+                alt="tools"
               />
             </figure>
             <div class="card-body">
@@ -71,16 +71,16 @@ const Purchase = () => {
               <div class="card-actions justify-center mt-5">
                 <div className="grid grid-cols-3 gap-5 border-t-4 border-gray-300 pt-5">
                 <img
-                src="https://api.lorem.space/image/shoes?w=400&h=225"
-                alt="Shoes"
+                src={images}
+                alt="tools"
                 />
                 <img
-              src="https://api.lorem.space/image/shoes?w=400&h=225"
-              alt="Shoes"
+              src={tools}
+              alt="tools"
                 />
                 <img
-            src="https://api.lorem.space/image/shoes?w=400&h=225"
-            alt="Shoes"
+            src={tools}
+            alt="tools"
           />
                 </div>
               </div>
