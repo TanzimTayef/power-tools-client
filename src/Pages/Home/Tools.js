@@ -15,7 +15,7 @@ const Tools = ({ tool }) => {
     <div class="card lg:max-w-lg bg-base-100 shadow-xl">
       <figure>
         <img
-          src="https://api.lorem.space/image/shoes?w=400&h=225"
+          src={images}
           alt="tools"
         />
       </figure>

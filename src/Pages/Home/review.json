@@ -1,0 +1,115 @@
+[
+  
+    {
+      "isActive": false,
+      "rating": 4.9,
+      "picture": "http://placehold.it/32x32",
+      "name": "Ladonna Maddox",
+      "message": "Thank you for the wonderful review and for taking the time to share your feedback with [COMPANY].  Our priority is customer service and we are ecstatic that we met that mark! Kind folks like you make our job a pleasure.\r\n",
+      "address": "882 Belmont Avenue, Eggertsville, Ohio, 1584"
+    },
+    {
+      "isActive": true,
+      "rating": 4.8,
+      "picture": "http://placehold.it/32x32",
+      "name": "Nicole Hull",
+      "message": "Thank you so much for your review! The [Product/Service] is one of my favorites as well! Next time, you should try our new [Product/Service] it’s great during this time of year! – [FIRST NAME]\r\n",
+      "address": "105 Reed Street, Wollochet, Iowa, 5137"
+    },
+    {
+      "isActive": false,
+      "rating": 4.6,
+      "picture": "http://placehold.it/32x32",
+      "name": "Nell Pena",
+      "message": "Thank you for leaving a 5-Stars review. At [Company Name], we continuously strive to serve you better.  We are glad that the team has managed to meet your needs .\r\n",
+      "address": "935 Eaton Court, Orason, Arkansas, 4712"
+    },
+    {
+      "isActive": false,
+      "rating": 4.5,
+      "picture": "http://placehold.it/32x32",
+      "name": "Thomas Rosales",
+      "message": "Thank you for sharing your feedback. We are sorry that your experience was not an amazing one. At [Company Name], we strive to provide the best experience we can for our customers.\r\n",
+      "address": "915 Lefferts Avenue, Roy, Arizona, 3089"
+    },
+    {
+      "isActive": true,
+      "rating": 4.8,
+      "picture": "http://placehold.it/32x32",
+      "name": "Clare Reese",
+      "message": "Please feel free to reach out to [Contact Person Information] with any further comments, concerns or suggestions you have so that we can make your experience a better one.\r\n",
+      "address": "175 Vanderveer Street, Ellerslie, Northern Mariana Islands, 5784"
+    },
+    {
+      "isActive": false,
+      "rating": 4.5,
+      "picture": "http://placehold.it/32x32",
+      "name": "Deanna Middleton",
+      "message": "Please feel free to reach out to [Contact Person Information] with any further comments, concerns or suggestions you have so that we can make your experience a better one.\r\n",
+      "address": "262 Chestnut Street, Loma, South Carolina, 9387"
+    },
+    {
+      "isActive": true,
+      "rating": 4.1,
+      "picture": "http://placehold.it/32x32",
+      "name": "Natalie Reeves",
+      "message": "Show appreciation for the customer who took the time to share their positive experience. After all, great reviews and high \r\n",
+      "address": "385 Schenectady Avenue, Callaghan, Idaho, 783"
+    },
+    {
+      "isActive": false,
+      "rating": 4.8,
+      "picture": "http://placehold.it/32x32",
+      "name": "Dena Ramos",
+      "message": "are thrilled to have you as part of the [COMPANY] family! Thank you for sharing your kind words with us. It means the world to us and to our entire team! We look forward to serving you again soon!\r\n",
+      "address": "397 Kings Place, Belva, Massachusetts, 3139"
+    },
+    {
+      "isActive": false,
+      "rating": 4.9,
+      "picture": "http://placehold.it/32x32",
+      "name": "Essie Page",
+      "message": "We are thrilled to have you as part of the [COMPANY] family! Thank you for sharing your kind words with us. It means the world to us and to our entire team! We look forward to serving you again soon!\r\n",
+      "address": "519 Norfolk Street, Urie, California, 7282"
+    },
+    {
+      "isActive": true,
+      "rating": 4,
+      "picture": "http://placehold.it/32x32",
+      "name": "Michael Woods",
+      "message": "We are thrilled to have you as part of the [COMPANY] family! Thank you for sharing your kind words with us. It means the world to us and to our entire team! We look forward to serving you again soon!\r\n",
+      "address": "804 Narrows Avenue, Avalon, Pennsylvania, 2506"
+    },
+    {
+      "isActive": true,
+      "rating": 4.2,
+      "picture": "http://placehold.it/32x32",
+      "name": "Tasha Delaney",
+      "message": "Let’s get on a call and address this ASAP, we value your business. Please contact us at [phone/email] when convenient.\r\n",
+      "address": "696 Poplar Avenue, Rehrersburg, Marshall Islands, 3572"
+    },
+    {
+      "isActive": true,
+      "rating": 4,
+      "picture": "http://placehold.it/32x32",
+      "name": "Adriana Whitfield",
+      "message": "We are happy to hear you had a positive experience at [COMPANY]! We value your input and encourage you to let us know more details about your experience with us.\r\n",
+      "address": "432 Roosevelt Place, Gambrills, North Carolina, 6762"
+    },
+    {
+      "isActive": true,
+      "rating": 5,
+      "picture": "http://placehold.it/32x32",
+      "name": "Talley Bruce",
+      "message": "We’re so sorry that your experience did not match your expectations. Please help us to improve by providing more information on your experience. We can be reached at [phone/email].\r\n",
+      "address": "972 Jackson Court, Duryea, Washington, 4263"
+    },
+    {
+      "isActive": false,
+      "rating": 4.8,
+      "picture": "http://placehold.it/32x32",
+      "name": "Elinor Weeks",
+      "message": "I’m sorry to hear about your disappointment with us, and I would like to personally assist you with making things right.\r\n",
+      "address": "786 Maple Street, Hackneyville, West Virginia, 7253"
+    }
+  ]
