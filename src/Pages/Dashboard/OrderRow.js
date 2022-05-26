@@ -10,23 +10,30 @@ const OrderRow = ({ order, handleDelete, setDeletingUser }) => {
       <td>{email}</td>
       <td>{quantity}</td>
       <td>{price}</td>
+      {/* -------------------- */}
       <td>
         {price && !order.paid && (
           <Link to={`/dashboard/payment/${_id}`}>
-            <button className="btn btn-sm">Pay</button>
+            <button className="btn btn-sm btn-success">pay</button>
           </Link>
         )}
+        {price && order.paid && (
+          <div>
+            <p>
+              <span className="text-success">Paid</span>
+            </p>
+            <p className="text-sm">
+              <small> <span>Paid id: </span>
+              <span className="text-success">{order.transactionId}</span></small>
+            </p>
+          </div>
+        )}
       </td>
+      {/* -------------------------- */}
 
       <td>
-        {" "}
-        <label
-          onClick={() => setDeletingUser(order)}
-          for="my-modal-6"
-          class="btn btn-error btn-sm "
-        >
-          X
-        </label>
+        {!order.paid &&  <label onClick={() => setDeletingUser(order)}  for="my-modal-6" class="btn btn-error btn-sm">X</label>}
+       
       </td>
     </tr>
   );

@@ -11,7 +11,7 @@ const CheckoutForm = ({orders}) => {
     const stripe = useStripe();
     const elements = useElements();
 
-    const { price } = orders;
+    const {_id,  price } = orders;
     console.log(price)
 
     useEffect(() => {
@@ -72,6 +72,24 @@ const CheckoutForm = ({orders}) => {
             console.log(paymentIntent);
             setSuccess('Congrats! Your payment is completed.')
             toast("Congrats! Your payment is completed.")
+
+
+                 //store payment on database
+                 const payment = {
+                    tools: _id,
+                    transactionId: paymentIntent.id
+                }
+                fetch(`https://young-springs-65716.herokuapp.com/order/${_id}`, {
+                    method: 'PATCH',
+                    headers: {
+                        'content-type': 'application/json',
+                    },
+                    body: JSON.stringify(payment)
+                }).then(res=>res.json())
+                .then(data => {
+                    setProcessing(false);
+                    console.log(data);
+                })
         }
 
 
