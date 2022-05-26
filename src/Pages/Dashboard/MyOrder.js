@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { toast } from "react-toastify";
 import auth from "../../firebase.init";
+import DeleteConfirmModal from "./DeleteConfirmModal";
 import OrderRow from "./OrderRow";
 
 const MyOrder = () => {
   const [user] = useAuthState(auth);
   const [orders, setOrders] = useState([]);
+  const [deletingUser, setDeletingUser] = useState(null)
 
   useEffect(() => {
     const email = user.email;
@@ -14,24 +16,9 @@ const MyOrder = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setOrders(data));
-  }, [user]);
+  }, [user, orders]);
 
-  const handleDelete = (id) => {
-    const proceed = window.confirm("Are you sure?");
-    if (proceed) {
-      const url = `https://young-springs-65716.herokuapp.com/order/${id}`;
-      fetch(url, {
-        method: "DELETE",
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
-          toast("Order deleted")
-          const remaining = orders.filter((order) => order._id !== id);
-          setOrders(remaining);
-        });
-    }
-  };
+ 
 
   return (
     <section className="py-8 ">
@@ -50,11 +37,16 @@ const MyOrder = () => {
           </thead>
           <tbody>
             {orders.map((order) => (
-              <OrderRow key={order._id} order={order} handleDelete={handleDelete} />
+              <OrderRow key={order._id} order={order} setDeletingUser={setDeletingUser} />
             ))}
           </tbody>
         </table>
       </div>
+   {deletingUser && <DeleteConfirmModal
+        deletingUser={deletingUser}
+        setOrders={setOrders}
+        setDeletingUser={setDeletingUser}
+      />}
     </section>
   );
 };
