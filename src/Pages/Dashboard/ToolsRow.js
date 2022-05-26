@@ -1,7 +1,26 @@
 import React from "react";
+import { toast } from "react-toastify";
 
-const ToolsRow = ({ tool }) => {
+const ToolsRow = ({ tool, setTools }) => {
   const { toolsName, _id, desc, images, price, minOrder, availableQuan } = tool;
+
+
+  const handleToolsDelete = (id) => {
+    const url = `https://young-springs-65716.herokuapp.com/tools/${id}`;
+    fetch(url, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+          toast("Product Delete success")
+       
+        const remaining = tool.filter((t) => t._id !== id);
+        setTools(remaining);
+      });
+ 
+};
+
   return (
     <tr>
       <th>
@@ -29,7 +48,7 @@ const ToolsRow = ({ tool }) => {
       <td>{minOrder} pice</td>
       <td>{price} $</td>
       <th>
-        <button class="btn btn-ghost btn-xs bg-red-600 text-white">X</button>
+        <button onClick={() =>handleToolsDelete(_id)} class="btn btn-ghost btn-xs bg-red-600 text-white">X</button>
       </th>
     </tr>
   );
