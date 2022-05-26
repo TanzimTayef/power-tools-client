@@ -8,7 +8,7 @@ const Review = ({ review }) => {
         <div className="pt-5">
         <div class="avatar online">
                 <div class="w-28 rounded-full">
-                  <img src="https://api.lorem.space/image/face?hash=28212" />
+                  <img src={picture} />
                 </div>
           </div>
        </div>
@@ -16,7 +16,7 @@ const Review = ({ review }) => {
           <h2 class="card-title py-0">{name}</h2>
           <div className=" text-primary">     Rating: <span className="font-bold">{rating}</span>   </div>
      <p className="italic text-xl">   <q>
-            {message.slice(1,100)}...
+            {message.slice(0, 90)}...
             </q>
         </p>
          
