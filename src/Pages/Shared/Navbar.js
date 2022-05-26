@@ -13,19 +13,19 @@ const Navbar = () => {
   const menuItems = (
     <>
       <li>
-        <Link className="font-semibold hover:bg-primary   text-sm text-gray-200 uppercase hover:bg-neutral " to="/">Home</Link>
+        <Link className="font-semibold hover:bg-primary   text-sm text-gray-200 " to="/">Home</Link>
       </li>
 
       <li>
-        <Link className="font-semibold hover:bg-primary text-sm text-gray-200 uppercase hover:bg-neutral " to="/blogs">Blogs</Link>
+        <Link className="font-semibold hover:bg-primary text-sm text-gray-200   " to="/blogs">Blogs</Link>
       </li>
       <li>
-        <Link className="font-semibold hover:bg-primary text-sm text-gray-200 uppercase hover:bg-neutral " to="/portfolio">My Portfolio</Link>
+        <Link className="font-semibold hover:bg-primary text-sm text-gray-200   " to="/portfolio">My Portfolio</Link>
       </li>
       
       <li> 
         {
-          user &&  <Link className="font-semibold hover:bg-primary text-sm text-gray-200 uppercase hover:bg-neutral " to="/dashboard">Dashboard</Link> 
+          user &&  <Link className="font-semibold hover:bg-primary text-sm text-gray-200  " to="/dashboard">Dashboard</Link> 
         }
        </li>
     </>
@@ -58,7 +58,7 @@ const Navbar = () => {
             {menuItems}
           </ul>
         </div>
-        <a className="normal-case text-xl text-2xl font-bold uppercase text-white">Power Tools</a>
+        <a className="normal-case text-xl text-2xl font-bold  text-white">Power Tools</a>
       </div>
       <div className="navbar-center hidden lg:flex ">
         <ul className="menu menu-horizontal p-0 ">{menuItems}</ul>
@@ -73,9 +73,9 @@ const Navbar = () => {
         {
             <li>
         {user ? (
-          <button onClick={logout}className="shadow-xl btn  font-semibold  text-sm uppercase  text-gray-200  hover:bg-transparent border bg-transparent">Sign out</button>
+          <button onClick={logout}className="shadow-xl btn hover:bg-primary  font-semibold    text-gray-200 capitalize  hover:bg-transparent border bg-transparent">Sign Out</button>
         ) : (
-          <Link className="shadow-xl btn font-semibold  text-sm uppercase  text-gray-200  hover:bg-transparent bg-transparent border"  to="/login">Login</Link>
+          <Link className="shadow-xl btn font-semibold   hover:bg-primary  text-gray-200 capitalize   hover:bg-transparent bg-transparent border"  to="/login">Login</Link>
         )}
       </li>
       }

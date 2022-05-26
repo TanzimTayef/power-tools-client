@@ -2,6 +2,7 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 const MyProfile = () => {
   const [user] = useAuthState(auth);
@@ -27,7 +28,8 @@ const MyProfile = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log("put success", data);
+        toast("Updated your information. Thanks!");
+
       });
   };
   return (

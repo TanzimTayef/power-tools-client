@@ -22,6 +22,8 @@ import PurchaseContainer from "./Pages/Purchase/PurchaseContainer";
 import AllTools from "./Pages/Purchase/AllTools";
 import Blogs from "./Pages/Blogs/Blogs";
 import Loading from "./Pages/Shared/Loading";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -54,6 +56,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
+      <ToastContainer />
     </div>
   );
 }

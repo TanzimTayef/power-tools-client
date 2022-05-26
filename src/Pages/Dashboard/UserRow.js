@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const UserRow = ({ user, index }) => {
     const {displayName, email, role} = user;
@@ -12,7 +13,9 @@ const UserRow = ({ user, index }) => {
             
         })
             .then(res => res.json())
-        .then(data => console.log(data))
+            .then(data => {
+                toast("made a new admin success!");
+            })
         
     }
 

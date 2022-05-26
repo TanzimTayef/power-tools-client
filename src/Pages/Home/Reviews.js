@@ -33,7 +33,7 @@ const Reviews = () => {
           <div className="">
               <Slider {...settings}>
               {
-                  reviews.slice(0,4).map(review => <Review key={review._id} review={review} />)
+                  reviews.slice(0,3).reverse().map(review => <Review key={review._id} review={review} />)
              }
           </Slider>
           </div>
