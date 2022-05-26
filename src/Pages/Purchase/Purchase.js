@@ -75,11 +75,11 @@ const Purchase = () => {
                 alt="tools"
                 />
                 <img
-              src={tools}
+              src={images}
               alt="tools"
                 />
                 <img
-            src={tools}
+            src={images}
             alt="tools"
           />
                 </div>
