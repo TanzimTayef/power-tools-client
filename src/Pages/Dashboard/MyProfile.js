@@ -18,7 +18,7 @@ const MyProfile = () => {
       phone: data.phone,
       profile: data.profile,
     };
-    fetch(`http://localhost:5000/user/${email}`, {
+    fetch(`https://young-springs-65716.herokuapp.com/user/${email}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

@@ -13,7 +13,7 @@ const Purchase = () => {
   
 
   useEffect(() => {
-    const url = `http://localhost:5000/tools/${purchaseId}`;
+    const url = `https://young-springs-65716.herokuapp.com/tools/${purchaseId}`;
     console.log(url);
     fetch(url)
       .then((res) => res.json())
@@ -35,7 +35,7 @@ const Purchase = () => {
       address: e.target.address.value,
     };
 
-    fetch("http://localhost:5000/order", {
+    fetch("https://young-springs-65716.herokuapp.com/order", {
       method: "POST",
       headers: {
         "content-type": "application/json",

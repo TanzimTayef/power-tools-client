@@ -9,7 +9,7 @@ const MyOrder = () => {
 
   useEffect(() => {
     const email = user.email;
-    const url = `http://localhost:5000/order?email=${email}`;
+    const url = `https://young-springs-65716.herokuapp.com/order?email=${email}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setOrders(data));
@@ -18,7 +18,7 @@ const MyOrder = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `http://localhost:5000/order/${id}`;
+      const url = `https://young-springs-65716.herokuapp.com/order/${id}`;
       fetch(url, {
         method: "DELETE",
       })

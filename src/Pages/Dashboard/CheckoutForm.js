@@ -14,7 +14,7 @@ const CheckoutForm = ({orders}) => {
     console.log(price)
 
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://young-springs-65716.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
