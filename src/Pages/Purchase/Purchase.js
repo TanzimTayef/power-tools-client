@@ -101,27 +101,6 @@ const Purchase = () => {
 
             <div className="mt-8">
               <p className=" font-bold mb-2 border-b-2 pb-1 border-gray-300 uppercase text-gray-500">
-                {" "}
-                Quantity
-              </p>
-              <div class="flex shadow">
-                <button className="bg-gray-300 py-2 px-5 font-bold text-xl">
-                  -
-                </button>
-                <input
-                 
-                  type="text"
-                  placeholder={minOrder}
-                  class="bg-white w-full shadow px-5 py-1 max-w-xs text-center"
-                />
-                <button className="bg-gray-300 py-2 px-5 font-bold text-xl">
-                  +
-                </button>
-              </div>
-            </div>
-
-            <div className="mt-5">
-              <p className=" font-bold mb-2 border-b-2 pb-1 border-gray-300 uppercase text-gray-500">
                 Information
               </p>
               <form
@@ -154,20 +133,28 @@ const Purchase = () => {
                   placeholder="address"
                   className="bg-white w-full shadow px-2 py-1 max-w-xs"
                 />
+                <div>
+                <p className=" font-bold mb-2 border-b-2 pb-1 border-gray-300 uppercase text-gray-500">
+                {" "}
+                Quantity
+                  </p>
                   <div class="flex shadow">
-                <button  className="bg-gray-300 py-2 px-5 font-bold text-xl">
-                  -
-                </button>
-                  <input
-                    name="quantity"
-                  type="text"
-                  placeholder={minOrder}
-                  class="bg-white w-full shadow px-5 py-1 max-w-xs text-center"
-                />
-                <button className="bg-gray-300 py-2 px-5 font-bold text-xl">
-                  +
-                </button>
-              </div>
+              
+              <button  className="bg-gray-300 py-2 px-5 font-bold text-xl">
+                -
+              </button>
+                <input
+                  name="quantity"
+                type="text"
+                placeholder={minOrder}
+                class="bg-white w-full shadow px-5 py-1 max-w-xs text-center"
+              />
+              <button className="bg-gray-300 py-2 px-5 font-bold text-xl">
+                +
+              </button>
+            </div>
+                </div>
+              
                 <input
                   type="submit"
                   value="purchase"

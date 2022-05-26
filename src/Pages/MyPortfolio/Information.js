@@ -13,9 +13,7 @@ const Information = () => {
           <h1 class="text-5xl font-bold">Tanzim Alom Tayef</h1>
           <h3 class="text-2xl font-bold">Email: tayef464@gamil.com</h3>
           <p class="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+           A junior full stack web developer.I am interested working for backend development. I have already completed 15 project.... 
           </p>
 
           <button class="btn btn-link">Read more ❯</button>

@@ -7,32 +7,32 @@ const Skill = () => {
     const skills = [
         {
             name: "HTML",
-            details: "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, magni! Voluptatibus deleniti sapiente explicabo eum ducimus corporis sed aliquid non. Nemo vitae reprehenderit eius iusto illo excepturi ipsum rerum numquam!"
+            details: "I know 99 percent HTML5. "
         },
         {
             name: "CSS",
-            details: "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, magni! Voluptatibus deleniti sapiente explicabo eum ducimus corporis sed aliquid non. Nemo vitae reprehenderit eius iusto illo excepturi ipsum rerum numquam!"
+            details: " I know 80 percent CSS3."
         },
         {
             name: "JAVASCRIPT",
-            details: "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, magni! Voluptatibus deleniti sapiente explicabo eum ducimus corporis sed aliquid non. Nemo vitae reprehenderit eius iusto illo excepturi ipsum rerum numquam!"
+            details: "I know 70 percent JAVASCRIPT"
         },
         {
             name: "REACT",
-            details: "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, magni! Voluptatibus deleniti sapiente explicabo eum ducimus corporis sed aliquid non. Nemo vitae reprehenderit eius iusto illo excepturi ipsum rerum numquam!"
+            details: " I know 75 percent REACT"
         },
         {
             name: "NODE",
-            details: "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, magni! Voluptatibus deleniti sapiente explicabo eum ducimus corporis sed aliquid non. Nemo vitae reprehenderit eius iusto illo excepturi ipsum rerum numquam!"
+            details: " I am a begenner in node js"
         },
         { 
             name: "EXPRESS",
-            details: "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, magni! Voluptatibus deleniti sapiente explicabo eum ducimus corporis sed aliquid non. Nemo vitae reprehenderit eius iusto illo excepturi ipsum rerum numquam!"
+            details: "I can make a backend project by express. but i am not expert"
         },
         {
            
             name: "MONGODB",
-            details: "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, magni! Voluptatibus deleniti sapiente explicabo eum ducimus corporis sed aliquid non. Nemo vitae reprehenderit eius iusto illo excepturi ipsum rerum numquam!"
+            details: "I Loved communication with mongodb. mongodb easy and friendly!"
         },
     ]
 
